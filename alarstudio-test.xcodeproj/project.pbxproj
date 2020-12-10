@@ -7,23 +7,81 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1313F4F925801ED200D17240 /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1313F4F825801ED200D17240 /* KeyChain.swift */; };
 		13955CB9257FE6230033F1EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13955CB8257FE6230033F1EE /* AppDelegate.swift */; };
-		13955CBB257FE6230033F1EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13955CBA257FE6230033F1EE /* SceneDelegate.swift */; };
-		13955CBD257FE6230033F1EE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13955CBC257FE6230033F1EE /* ContentView.swift */; };
 		13955CBF257FE6260033F1EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13955CBE257FE6260033F1EE /* Assets.xcassets */; };
 		13955CC2257FE6260033F1EE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13955CC1257FE6260033F1EE /* Preview Assets.xcassets */; };
 		13955CC5257FE6260033F1EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13955CC3257FE6260033F1EE /* LaunchScreen.storyboard */; };
+		13955CD2257FE81E0033F1EE /* CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13955CD1257FE81E0033F1EE /* CancelBag.swift */; };
+		13955CD6257FE8320033F1EE /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13955CD5257FE8320033F1EE /* Loadable.swift */; };
+		13955CDA257FE86F0033F1EE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13955CD9257FE86F0033F1EE /* Coordinator.swift */; };
+		13955CDE257FE88E0033F1EE /* CombineHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13955CDD257FE88E0033F1EE /* CombineHelpers.swift */; };
+		13955CE1257FE8A10033F1EE /* UIKitHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13955CE0257FE8A10033F1EE /* UIKitHelpers.swift */; };
+		13955CE4257FE8B10033F1EE /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13955CE3257FE8B10033F1EE /* Formatters.swift */; };
+		13955CE9257FE9040033F1EE /* ContainerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13955CE8257FE9040033F1EE /* ContainerProtocols.swift */; };
+		13955CEE257FE9380033F1EE /* ServiceProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13955CED257FE9380033F1EE /* ServiceProtocols.swift */; };
+		13955CF2257FE9500033F1EE /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13955CF1257FE9500033F1EE /* AuthService.swift */; };
+		13955CF8257FE97C0033F1EE /* TransactionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13955CF7257FE97C0033F1EE /* TransactionsService.swift */; };
+		13955D01257FE9E50033F1EE /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13955D00257FE9E50033F1EE /* Model.swift */; };
+		13955D34257FED0A0033F1EE /* AuthViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13955D33257FED0A0033F1EE /* AuthViewCoordinator.swift */; };
+		13955D37257FED430033F1EE /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13955D36257FED430033F1EE /* AuthViewController.swift */; };
+		13955D3A257FED500033F1EE /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13955D39257FED500033F1EE /* AuthViewModel.swift */; };
+		13955D3D257FED730033F1EE /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13955D3C257FED730033F1EE /* RootCoordinator.swift */; };
+		13955D41257FF0BD0033F1EE /* AuthContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13955D40257FF0BD0033F1EE /* AuthContainer.swift */; };
+		13955D4A257FFF250033F1EE /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13955D49257FFF250033F1EE /* NetworkService.swift */; };
+		13955D4D257FFF3E0033F1EE /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13955D4C257FFF3E0033F1EE /* NetworkDataFetcher.swift */; };
+		13955D50257FFF520033F1EE /* DataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13955D4F257FFF520033F1EE /* DataFetcherService.swift */; };
+		13955D58258003FC0033F1EE /* CountriesViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13955D57258003FC0033F1EE /* CountriesViewCoordinator.swift */; };
+		13955D5F258004280033F1EE /* CountriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13955D5E258004280033F1EE /* CountriesViewModel.swift */; };
+		13955D622580043E0033F1EE /* CountriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13955D612580043E0033F1EE /* CountriesViewController.swift */; };
+		13955D68258006460033F1EE /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13955D67258006460033F1EE /* AuthResponse.swift */; };
+		13B408B82582328900CC59D5 /* CountriesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B408B72582328900CC59D5 /* CountriesContainer.swift */; };
+		13B408BB2582359E00CC59D5 /* CountriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B408BA2582359E00CC59D5 /* CountriesService.swift */; };
+		13B408BF2582398B00CC59D5 /* CountriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B408BE2582398B00CC59D5 /* CountriesModel.swift */; };
+		13B408D3258268D100CC59D5 /* MapViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B408D2258268D100CC59D5 /* MapViewCoordinator.swift */; };
+		13B408D7258269A600CC59D5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B408D6258269A600CC59D5 /* MapViewController.swift */; };
+		13B408DA258269B800CC59D5 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B408D9258269B800CC59D5 /* MapViewModel.swift */; };
+		13B408DD25826A1100CC59D5 /* SwiftUI + ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B408DC25826A1100CC59D5 /* SwiftUI + ImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1313F4F825801ED200D17240 /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
 		13955CB5257FE6230033F1EE /* alarstudio-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "alarstudio-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13955CB8257FE6230033F1EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		13955CBA257FE6230033F1EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		13955CBC257FE6230033F1EE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		13955CBE257FE6260033F1EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13955CC1257FE6260033F1EE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		13955CC4257FE6260033F1EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13955CC6257FE6260033F1EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13955CD1257FE81E0033F1EE /* CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelBag.swift; sourceTree = "<group>"; };
+		13955CD5257FE8320033F1EE /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
+		13955CD9257FE86F0033F1EE /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		13955CDD257FE88E0033F1EE /* CombineHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineHelpers.swift; sourceTree = "<group>"; };
+		13955CE0257FE8A10033F1EE /* UIKitHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitHelpers.swift; sourceTree = "<group>"; };
+		13955CE3257FE8B10033F1EE /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
+		13955CE8257FE9040033F1EE /* ContainerProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerProtocols.swift; sourceTree = "<group>"; };
+		13955CED257FE9380033F1EE /* ServiceProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocols.swift; sourceTree = "<group>"; };
+		13955CF1257FE9500033F1EE /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		13955CF7257FE97C0033F1EE /* TransactionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsService.swift; sourceTree = "<group>"; };
+		13955D00257FE9E50033F1EE /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		13955D33257FED0A0033F1EE /* AuthViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewCoordinator.swift; sourceTree = "<group>"; };
+		13955D36257FED430033F1EE /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		13955D39257FED500033F1EE /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		13955D3C257FED730033F1EE /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
+		13955D40257FF0BD0033F1EE /* AuthContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthContainer.swift; sourceTree = "<group>"; };
+		13955D49257FFF250033F1EE /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		13955D4C257FFF3E0033F1EE /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
+		13955D4F257FFF520033F1EE /* DataFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherService.swift; sourceTree = "<group>"; };
+		13955D57258003FC0033F1EE /* CountriesViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewCoordinator.swift; sourceTree = "<group>"; };
+		13955D5E258004280033F1EE /* CountriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewModel.swift; sourceTree = "<group>"; };
+		13955D612580043E0033F1EE /* CountriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewController.swift; sourceTree = "<group>"; };
+		13955D67258006460033F1EE /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
+		13B408B72582328900CC59D5 /* CountriesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesContainer.swift; sourceTree = "<group>"; };
+		13B408BA2582359E00CC59D5 /* CountriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesService.swift; sourceTree = "<group>"; };
+		13B408BE2582398B00CC59D5 /* CountriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesModel.swift; sourceTree = "<group>"; };
+		13B408D2258268D100CC59D5 /* MapViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCoordinator.swift; sourceTree = "<group>"; };
+		13B408D6258269A600CC59D5 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		13B408D9258269B800CC59D5 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		13B408DC25826A1100CC59D5 /* SwiftUI + ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI + ImageLoader.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +115,13 @@
 			isa = PBXGroup;
 			children = (
 				13955CB8257FE6230033F1EE /* AppDelegate.swift */,
-				13955CBA257FE6230033F1EE /* SceneDelegate.swift */,
-				13955CBC257FE6230033F1EE /* ContentView.swift */,
-				13955CBE257FE6260033F1EE /* Assets.xcassets */,
-				13955CC3257FE6260033F1EE /* LaunchScreen.storyboard */,
-				13955CC6257FE6260033F1EE /* Info.plist */,
-				13955CC0257FE6260033F1EE /* Preview Content */,
+				13955CD8257FE8590033F1EE /* Library */,
+				13955CEC257FE9280033F1EE /* Services */,
+				13955CE7257FE8D60033F1EE /* DIContainers */,
+				13955D66258005C70033F1EE /* Models */,
+				13955CCE257FE68E0033F1EE /* Screens */,
+				13955CD0257FE77B0033F1EE /* Utils */,
+				13955CCD257FE6440033F1EE /* Resources */,
 			);
 			path = "alarstudio-test";
 			sourceTree = "<group>";
@@ -73,6 +132,114 @@
 				13955CC1257FE6260033F1EE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		13955CCD257FE6440033F1EE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				13955CBE257FE6260033F1EE /* Assets.xcassets */,
+				13955CC3257FE6260033F1EE /* LaunchScreen.storyboard */,
+				13955CC6257FE6260033F1EE /* Info.plist */,
+				13955CC0257FE6260033F1EE /* Preview Content */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		13955CCE257FE68E0033F1EE /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				13B408CA258255D700CC59D5 /* Map */,
+				13955D56258003D10033F1EE /* Countries */,
+				13955D32257FECEA0033F1EE /* Auth */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		13955CD0257FE77B0033F1EE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				13955CD1257FE81E0033F1EE /* CancelBag.swift */,
+				13955CD5257FE8320033F1EE /* Loadable.swift */,
+				13955CDD257FE88E0033F1EE /* CombineHelpers.swift */,
+				13955CE0257FE8A10033F1EE /* UIKitHelpers.swift */,
+				13955CE3257FE8B10033F1EE /* Formatters.swift */,
+				13B408DC25826A1100CC59D5 /* SwiftUI + ImageLoader.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		13955CD8257FE8590033F1EE /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				13955D3C257FED730033F1EE /* RootCoordinator.swift */,
+				13955CD9257FE86F0033F1EE /* Coordinator.swift */,
+				13955D00257FE9E50033F1EE /* Model.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		13955CE7257FE8D60033F1EE /* DIContainers */ = {
+			isa = PBXGroup;
+			children = (
+				13955CE8257FE9040033F1EE /* ContainerProtocols.swift */,
+				13955D40257FF0BD0033F1EE /* AuthContainer.swift */,
+				13B408B72582328900CC59D5 /* CountriesContainer.swift */,
+			);
+			path = DIContainers;
+			sourceTree = "<group>";
+		};
+		13955CEC257FE9280033F1EE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				13955CED257FE9380033F1EE /* ServiceProtocols.swift */,
+				13955CF1257FE9500033F1EE /* AuthService.swift */,
+				13B408BA2582359E00CC59D5 /* CountriesService.swift */,
+				13955CF7257FE97C0033F1EE /* TransactionsService.swift */,
+				13955D49257FFF250033F1EE /* NetworkService.swift */,
+				13955D4C257FFF3E0033F1EE /* NetworkDataFetcher.swift */,
+				13955D4F257FFF520033F1EE /* DataFetcherService.swift */,
+				1313F4F825801ED200D17240 /* KeyChain.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		13955D32257FECEA0033F1EE /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				13955D33257FED0A0033F1EE /* AuthViewCoordinator.swift */,
+				13955D36257FED430033F1EE /* AuthViewController.swift */,
+				13955D39257FED500033F1EE /* AuthViewModel.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		13955D56258003D10033F1EE /* Countries */ = {
+			isa = PBXGroup;
+			children = (
+				13955D57258003FC0033F1EE /* CountriesViewCoordinator.swift */,
+				13955D612580043E0033F1EE /* CountriesViewController.swift */,
+				13955D5E258004280033F1EE /* CountriesViewModel.swift */,
+			);
+			path = Countries;
+			sourceTree = "<group>";
+		};
+		13955D66258005C70033F1EE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				13955D67258006460033F1EE /* AuthResponse.swift */,
+				13B408BE2582398B00CC59D5 /* CountriesModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		13B408CA258255D700CC59D5 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				13B408D2258268D100CC59D5 /* MapViewCoordinator.swift */,
+				13B408D6258269A600CC59D5 /* MapViewController.swift */,
+				13B408D9258269B800CC59D5 /* MapViewModel.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,9 +312,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13B408DA258269B800CC59D5 /* MapViewModel.swift in Sources */,
 				13955CB9257FE6230033F1EE /* AppDelegate.swift in Sources */,
-				13955CBB257FE6230033F1EE /* SceneDelegate.swift in Sources */,
-				13955CBD257FE6230033F1EE /* ContentView.swift in Sources */,
+				13955CDE257FE88E0033F1EE /* CombineHelpers.swift in Sources */,
+				13955CF2257FE9500033F1EE /* AuthService.swift in Sources */,
+				13955D37257FED430033F1EE /* AuthViewController.swift in Sources */,
+				13B408D3258268D100CC59D5 /* MapViewCoordinator.swift in Sources */,
+				13B408DD25826A1100CC59D5 /* SwiftUI + ImageLoader.swift in Sources */,
+				13955CE9257FE9040033F1EE /* ContainerProtocols.swift in Sources */,
+				13955CE4257FE8B10033F1EE /* Formatters.swift in Sources */,
+				13955D41257FF0BD0033F1EE /* AuthContainer.swift in Sources */,
+				13955CDA257FE86F0033F1EE /* Coordinator.swift in Sources */,
+				13955D68258006460033F1EE /* AuthResponse.swift in Sources */,
+				13955D50257FFF520033F1EE /* DataFetcherService.swift in Sources */,
+				13955D4D257FFF3E0033F1EE /* NetworkDataFetcher.swift in Sources */,
+				13955D58258003FC0033F1EE /* CountriesViewCoordinator.swift in Sources */,
+				13B408D7258269A600CC59D5 /* MapViewController.swift in Sources */,
+				13955D622580043E0033F1EE /* CountriesViewController.swift in Sources */,
+				13955CD2257FE81E0033F1EE /* CancelBag.swift in Sources */,
+				13955D3A257FED500033F1EE /* AuthViewModel.swift in Sources */,
+				13B408B82582328900CC59D5 /* CountriesContainer.swift in Sources */,
+				1313F4F925801ED200D17240 /* KeyChain.swift in Sources */,
+				13B408BF2582398B00CC59D5 /* CountriesModel.swift in Sources */,
+				13955D5F258004280033F1EE /* CountriesViewModel.swift in Sources */,
+				13955D01257FE9E50033F1EE /* Model.swift in Sources */,
+				13955D34257FED0A0033F1EE /* AuthViewCoordinator.swift in Sources */,
+				13955D3D257FED730033F1EE /* RootCoordinator.swift in Sources */,
+				13955CEE257FE9380033F1EE /* ServiceProtocols.swift in Sources */,
+				13955CE1257FE8A10033F1EE /* UIKitHelpers.swift in Sources */,
+				13955CF8257FE97C0033F1EE /* TransactionsService.swift in Sources */,
+				13955D4A257FFF250033F1EE /* NetworkService.swift in Sources */,
+				13B408BB2582359E00CC59D5 /* CountriesService.swift in Sources */,
+				13955CD6257FE8320033F1EE /* Loadable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,10 +483,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"alarstudio-test/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"alarstudio-test/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = C8F3CLJ592;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "alarstudio-test/Info.plist";
+				INFOPLIST_FILE = "alarstudio-test/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,10 +505,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"alarstudio-test/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"alarstudio-test/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = C8F3CLJ592;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "alarstudio-test/Info.plist";
+				INFOPLIST_FILE = "alarstudio-test/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
