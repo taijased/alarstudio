@@ -48,7 +48,11 @@ struct CountriesView: View {
             }
             
             .navigationBarTitle("Countries")
-            
+            .navigationBarItems(trailing:
+                Button("Logout") {
+                    viewModel.logOut()
+                }
+            )
         }.onAppear(perform: {
             self.viewModel.loadContent()
         })
