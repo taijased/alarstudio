@@ -19,12 +19,3 @@ protocol CountriesService {
 }
 
 
-
-
-
-protocol TransactionsService {
-    
-    init(token: AuthToken)
-    
-    func loadTransactions(user: User) -> Promise<[Transaction]>
-}
