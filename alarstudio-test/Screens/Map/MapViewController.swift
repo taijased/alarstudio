@@ -31,23 +31,13 @@ struct MapView: View {
     
     @ObservedObject var viewModel: MapViewModel
     
-    @State var coordinateRegion = MKCoordinateRegion(
-          center: CLLocationCoordinate2D(latitude: 42.2881207, longitude: 18.8239681),
-          span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
-    
-    
-    
-    
     var body: some View {
         
         
         ZStack(alignment: .bottom) {
 
-            Map(coordinateRegion: $coordinateRegion)
+            Map(coordinateRegion: $viewModel.coordinateRegion)
                    .edgesIgnoringSafeArea(.all)
-                .onAppear {
-                    coordinateRegion = viewModel.coordinateRegion
-                }
             infoBlock
             
         }
