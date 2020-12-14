@@ -30,6 +30,7 @@ struct CountriesView: View {
     
     @ObservedObject var viewModel: CountriesViewModel
     
+  
     var body: some View {
         
         NavigationView {
@@ -42,8 +43,7 @@ struct CountriesView: View {
                                 }
                     )
                     .onAppear {
-                        
-                        viewModel.loadNextPage(country)
+                        viewModel.loadMore(country)
                     }
             }
             
@@ -82,27 +82,26 @@ extension CountriesView {
         
         var body: some View {
             
-            ZStack(alignment: .center) {
-                RoundedRectangle(cornerRadius: 25, style: .continuous)
-                               .fill(Color.black)
-                ImageView(withURL: "https://source.unsplash.com/random")
-                    .frame(width: 350, height: 250)
-                VStack {
+
+            VStack(alignment: .leading)  {
+                ImageView(withURL: country.defaultImageURL, size: CGSize(width: 350, height: 250))
+             
+                VStack(alignment: .leading) {
                     Text(country.name)
-                        .font(.headline)
-                        .colorInvert()
-                    
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
                     Text(country.country)
-                        .font(.caption)
-                        .colorInvert()
+                        .font(.headline)
+                        .fontWeight(.black)
+                        .foregroundColor(.primary)
+                        .lineLimit(3)
                     Text(country.id)
-                        .font(.caption2)
-                        .colorInvert()
+                        .font(.caption)
+                        .foregroundColor(.secondary)
                 }
-                .padding(20)
-                .multilineTextAlignment(.center)
+                .layoutPriority(100)
+             
             }
-            
         }
     }
 }

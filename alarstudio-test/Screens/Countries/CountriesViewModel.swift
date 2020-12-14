@@ -11,9 +11,8 @@ final class CountriesViewModel: ObservableObject {
     let onSelect = PassthroughSubject<Country, Never>()
     let onLogOut = PassthroughSubject<Void, Never>()
     
-    @Published var countries: [Country] = []
-    
-    private var page: Int = 1
+    @Published var countries = [Country]()
+    @Published var status: Status = Status.notRequested(nextPage: 1)
     
     private let countriesService: CountriesService
     private var cancelBag = Set<AnyCancellable>()
@@ -30,7 +29,13 @@ final class CountriesViewModel: ObservableObject {
 extension CountriesViewModel {
     func loadContent() {
 
+        guard case let .notRequested(page) = status else {
+            return
+        }
+        status = .loading(page: page)
+        
         countriesService.fetchCountries(page: page) { countries in
+        
             guard
                 let countries = countries
             else {
@@ -38,20 +43,28 @@ extension CountriesViewModel {
                 self.logOut();
                 return
             }
+            
             self.countries.append(contentsOf: countries)
-            self.page+=1
+            
+            if countries.count == 0 {
+                // not more pages
+                self.status = .done
+            } else {
+                
+                guard case let .loading(page) = self.status else {
+                    fatalError("same error with status")
+                }
+                
+                self.status = .notRequested(nextPage: page + 1)
+            }
         }
-
     }
     
-    func loadNextPage(_ country: Country) {
-  
-        guard let lastItem = self.countries.last  else { return }
-        
-        if lastItem.id == country.id {
+    func loadMore(_ currentItem: Country? = nil) {
+        guard let currentItem = currentItem else { return }
+        if countries.count >= 0 && currentItem.id == countries[countries.count - 1].id {
             self.loadContent()
         }
-        
     }
     
     func select(country: Country) {
@@ -67,4 +80,14 @@ extension CountriesViewModel {
         KeyChain.clear()
     }
     
+}
+
+
+extension CountriesViewModel {
+    
+    enum Status {
+        case notRequested(nextPage: Int)
+        case loading(page: Int)
+        case done
+    }
 }

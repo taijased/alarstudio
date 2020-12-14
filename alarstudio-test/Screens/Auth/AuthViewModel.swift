@@ -85,13 +85,16 @@ fileprivate extension Loadable {
     var statusMessage: String {
         switch self {
         case .notRequested:
-            return "Hello!\nType  login=test\nType and  password=123"
+//            return "Привет!!!\n Тестовый логин и пароль\n login=test and  password=123"
+            return ""
         case .loaded:
             return ""
         case .isLoading:
             return "Logging in..."
         case .failed(let error):
             return "Error: " + error.localizedDescription
+        case .notValid:
+            return "Неправильный логин или пароль"
         }
     }
 }
@@ -102,16 +105,15 @@ extension AuthViewModel {
     
     func authenticate() {
 
-        
+     
         authService.authenticate(login: textIO.login, password: textIO.password) { (response) in
-
             if let response = response, response.isStatus() {
 
                 let _ = KeyChain.save(key: "token", data: response.code.data(using: .utf8)!)
 
                 self.progress.status = .loaded(AuthToken(value: response.code))
             } else {
-                self.progress.status = .notRequested
+                self.progress.status = .notValid
             }
         }
 

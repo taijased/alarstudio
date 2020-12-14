@@ -32,10 +32,14 @@ struct AuthView: View {
     
     var body: some View {
         VStack {
+            Image("logo")
+          
             Text(viewModel.textIO.message)
-                .font(.footnote)
+                .font(.caption2)
+                .foregroundColor(.red)
                 .multilineTextAlignment(.center)
-                .padding(10)
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
+            
             if viewModel.progress.status.isLoading {
                 ProgressView()
                     .padding(10)

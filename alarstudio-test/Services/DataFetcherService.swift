@@ -37,7 +37,8 @@ class DataFetcherService {
     
     func fetchCountries(page: Int, completion: @escaping (CountriesResponse?) -> Void) {
         guard let token = token?.value else { completion(nil); return }
-        let urlString = baseURL + "data.cgi?code=\(token)&p=\(1)"
+        let urlString = baseURL + "data.cgi?code=\(token)&p=\(page)"
+        
         dataFetcher.fetchGenericJSONData(urlString: urlString, response: completion)
     }
     

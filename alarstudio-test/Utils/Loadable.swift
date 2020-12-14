@@ -9,11 +9,15 @@
 import Combine
 import Foundation
 
+
+
+
 enum Loadable<Value> {
     
     typealias CancelToken = AnyCancellable
 
     case notRequested
+    case notValid
     case isLoading(last: Value?, cancelToken: CancelToken)
     case loaded(Value)
     case failed(Error)
@@ -68,6 +72,7 @@ extension Loadable {
                                   cancelToken: cancelToken)
             case let .loaded(value):
                 return .loaded(try transform(value))
+            case .notValid: return .notValid
             }
         } catch {
             return .failed(error)
@@ -79,6 +84,7 @@ extension Loadable: Equatable where Value: Equatable {
     static func == (lhs: Loadable<Value>, rhs: Loadable<Value>) -> Bool {
         switch (lhs, rhs) {
         case (.notRequested, .notRequested): return true
+        case (.notValid, .notValid): return true
         case let (.isLoading(lhsV, _), .isLoading(rhsV, _)): return lhsV == rhsV
         case let (.loaded(lhsV), .loaded(rhsV)): return lhsV == rhsV
         case let (.failed(lhsE), .failed(rhsE)):
