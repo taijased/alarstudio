@@ -23,5 +23,5 @@ struct Country: Codable, Identifiable {
     
     static let example: Country = Country(id: "KLAL", name: "LAKELAND LINDER RGNL", country: "United States of America", lat:  27.988916666666668, lon: -82.01855555555555)
     
-    let defaultImageURL: String = "https://source.unsplash.com/random"
+    let defaultImageURL: String = "https://picsum.photos/200/300"
 }
